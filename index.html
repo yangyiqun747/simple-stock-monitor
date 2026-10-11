@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简易盯盘台 Pro</title>
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+  <!-- 顶部操作栏 -->
+  <header class="header">
+    <div class="header-left">
+      <h1 class="logo">📊 简易盯盘台 Pro</h1>
+    </div>
+    <div class="header-center">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="输入股票代码或名称搜索（如：600519 / 贵州茅台）" autocomplete="off">
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn" id="notifBtn" title="开启桌面通知">🔔</button>
+      <button class="icon-btn" id="soundToggle" title="提示音开关">🔊</button>
+      <button class="icon-btn" id="demoToggle" title="演示模式" onclick="toggleDemoMode()">🎮 演示模式</button>
+    </div>
+  </header>
+
+  <!-- 大盘概览栏 -->
+  <div class="market-bar" id="marketBar">
+    <!-- 动态渲染 -->
+  </div>
+
+  <!-- 品类Tab栏 -->
+  <nav class="category-tabs" id="categoryTabs">
+    <!-- 动态渲染 -->
+  </nav>
+
+  <!-- 主内容区 -->
+  <main class="main-content">
+    <!-- 自选卡片网格 -->
+    <section class="card-grid" id="cardGrid">
+      <!-- 动态渲染 -->
+    </section>
+  </main>
+
+  <!-- 热门标的快捷添加浮层 -->
+  <button class="fab-btn" id="fabBtn" title="快捷添加热门标的">+</button>
+  <div class="fab-panel" id="fabPanel" hidden>
+    <div class="fab-panel-title">🔥 热门标的一键添加</div>
+    <div class="fab-list" id="fabList"></div>
+  </div>
+
+  <!-- 底部异动日志面板 -->
+  <footer class="log-panel">
+    <div class="log-header">
+      <span class="log-title">📋 异动日志</span>
+      <button class="log-clear" id="toggleReview" title="展开/收起复盘统计">📊 复盘</button>
+      <button class="log-clear" id="clearLogs">清空</button>
+    </div>
+    <div class="review-panel" id="reviewPanel" hidden></div>
+    <div class="log-list" id="logPanel">
+      <div class="log-empty">暂无异动记录</div>
+    </div>
+  </footer>
+
+  <!-- 状态栏 -->
+  <div class="status-bar" id="statusBar"></div>
+
+  <!-- Toast容器 -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js?v=2"></script>
+</body>
+</html>

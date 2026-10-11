@@ -1,0 +1,30 @@
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 依赖与构建产物
+node_modules
+dist
+build
+
+# 日志
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# 编辑器 / IDE
+.vscode
+.idea
+*.swp
+
+# 评审与验证脚本（内部质量资产，不随代码分发）
+.audit/
+
+# AI 助手的项目私有数据（内部决策记录，不属于产品代码）
+.workbuddy/
+
+# 开发过程的需求输入文档（非产品代码，且含已过时的信息）
+# 如需查阅原始需求，见 REVIEW.md 的功能演进记录
+prompt.txt
+.trae/
